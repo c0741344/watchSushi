@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="watchSushi_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" id="B01-z1-Ndl">
+                            <items>
+                                <button width="76" height="42" alignment="center" title="Left" id="Uve-Mt-juB">
+                                    <connections>
+                                        <action selector="tappedLeft" destination="AgC-eL-Hgc" id="DuQ-uD-xK7"/>
+                                    </connections>
+                                </button>
+                                <button width="76" height="42" alignment="center" title="Right" id="j59-bo-ZqA">
+                                    <connections>
+                                        <action selector="tappedRight" destination="AgC-eL-Hgc" id="70i-0b-E0l"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <button width="1" alignment="left" title="Increase Time" id="M1U-eP-Q68">
+                            <color key="titleColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="increaseTimePressed" destination="AgC-eL-Hgc" id="tBq-9e-5ys"/>
+                            </connections>
+                        </button>
+                        <label alignment="left" text="Time Update" id="fAQ-2D-Da1">
+                            <color key="textColor" red="0.98039215690000003" green="0.066666666669999999" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </label>
+                        <button width="1" alignment="left" title="Pause" id="wlH-ul-er2">
+                            <color key="backgroundColor" name="selectedTextBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            <connections>
+                                <action selector="pauseButtonPressed" destination="AgC-eL-Hgc" id="MgF-re-OFI"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="powerUpButton" destination="M1U-eP-Q68" id="aCu-yk-u4T"/>
+                        <outlet property="timerUpdateLabel" destination="fAQ-2D-Da1" id="ZOg-Lw-nDw"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="-72"/>
+        </scene>
+    </scenes>
+</document>
